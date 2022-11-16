@@ -5,7 +5,6 @@ payload = {'MTnq': '', 'lang': 'ru'}
 
 def get_weather(city):
 
-    #city = 'svo'
 
     url_template = 'http://wttr.in/{name}'
     url = url_template.format(name=city)
@@ -17,9 +16,10 @@ def get_weather(city):
 
 
 def main():
-    get_weather('svo')
-    get_weather('london')
-    get_weather('Череповец')
+    cities = ['svo', 'London', 'Череповец']
+    for city in cities:
+        get_weather(city)
+
 
 if __name__ == '__main__':
     main()
